@@ -6,7 +6,7 @@ curl -s -f "$URL" -o data.json 2> /dev/null
 
 # Check if the curl command was successful
 if [ $? -ne 0 ]; then
-  echo "Failed to fetch data from $URL" >> error.txt
+  echo "Failed to fetch data from $URL" >> errors.txt
 else
   echo "Data successfully saved to data.json"
 fi
