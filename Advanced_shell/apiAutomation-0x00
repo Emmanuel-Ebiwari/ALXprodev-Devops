@@ -1,0 +1,12 @@
+#!/bin/bash
+URL="https://pokeapi.co/api/v2/pokemon/"
+
+# Make the request and save the response
+curl -s -f "$URL" -o data.json 2> /dev/null
+
+# Check if the curl command was successful
+if [ $? -ne 0 ]; then
+  echo "Failed to fetch data from $URL" >> error.txt
+else
+  echo "Data successfully saved to data.json"
+fi
